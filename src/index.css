@@ -1,0 +1,638 @@
+body {
+  margin: 0;
+  background-color: #cdd4e7;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.fade-enter{
+  opacity: 0;
+  transform: scale(0.9);
+}
+.fade-enter-active{
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.fade-exit{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-exit-active{
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.container{
+  background-color: #cdd4e7;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+}
+.name{
+  position: absolute;
+  left: 8%;
+  top: 5%;
+  background-color: #323444;
+  width: 50vw;
+  height: 55vh;
+  z-index: 10;
+  padding-left: 5%;
+  padding-top: 2%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  overflow: hidden;
+}
+.intro{
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  background-color: #242533;
+  width: 50vw;
+  padding-left: 5%;
+  padding-top: 2%;
+  height: 45vh;
+  z-index: 10;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.skills{
+  position: absolute;
+  left: 60%;
+  background-color: #323444;
+  width: 35vw;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.projects{
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  background-color: #242533;
+  width: 35vw;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.contacts{
+  position: absolute;
+  left: 60%;
+  top: 80%;
+  background-color: #323444;
+  width: 35vw;
+  height: 20vh;
+  overflow: hidden;
+}
+
+.contactsPage,.namePage, .introPage, .skillsPage , .projectsPage, .projectDetail{
+  position: relative;
+  width: 55vw;
+  height: 80vh;
+  margin-left: 15%;
+  margin-top: 5%;
+  padding-left: 5%;
+  box-shadow: none;
+}
+
+.namePage ,.skillsPage,.contactsPage{
+  background-color: #323444;
+}
+
+.introPage, .projectsPage,.contactsPage,.projectDetail{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #242533;
+}
+
+.skillsPage{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.name .namePage, .intro .introPage ,.skills .skillsPage , .projects .projectsPage, .contacts .contactsPage{
+  width: 60vw;
+  padding: 0;
+  margin-left: 20px;
+  margin-top: 0;
+}
+
+
+.nav{
+  display: flex;
+  flex-wrap: wrap;
+  height: 20%;
+  width: 80%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar{
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  top: 9%;
+  left: 20%;
+  height: 20%;
+  width: 44%;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 60;
+}
+
+
+.namePage .nav{
+  display: none;
+}
+
+.name .namePage .nav{
+  display: flex;
+}
+.logo{
+  width: 50%;
+
+}
+
+.logo img{
+  width: 80px;
+  height: 80px;
+}
+
+.links{
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  color: white;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.links p:hover{
+  background-color:#282a39;
+  cursor: pointer;
+}
+
+.detail{
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail h1{
+  position: absolute;
+  width: 30%;
+  color: #af894a;
+  z-index: 10;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.name .namePage .detail h1{
+  font-size: 4rem;
+  top: 15%;
+  left: 0%;
+}
+
+.namePage .detail h1{
+  font-size: 5rem;
+  top: 20%;
+  left: 9%;
+}
+
+.detail img{
+  position: absolute;
+  z-index: 5;
+}
+
+.name .namePage .detail img{
+  left: 8%;
+  top: 10%;
+  width: 30%;
+  height: 55%;
+}
+
+.namePage .detail img{
+  width: 35%;
+  height: 60%;
+  top: 15%;
+  left: 20%;
+}
+
+.introduction p{
+  width: 30%;
+  position: absolute;
+  top: 25%;
+  color: gray;
+  left: 70%;
+  font-size: 1.2rem;
+}
+
+.name .namePage .introduction p{
+  top: 15%;
+  left: 50%;
+
+}
+
+.introduction h2{
+  position: absolute;
+  color: white;
+  font-size: 2.5rem;
+  left: 57%;
+  top: 30%;
+}
+
+.name .namePage .introduction h2{
+  font-size: 2rem;
+  left: 40%;
+  top: 20%;
+}
+
+.introduction h3{
+  position: absolute;
+  color: white;
+  font-size: 1rem;
+  left: 55%;
+  top: 45%;
+  font-weight: 400;
+}
+
+.name .namePage .introduction h3{
+  font-size: 1rem;
+  left: 35%;
+  top: 30%;
+  width: 45%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.socialMedia{
+  position: absolute;
+  top: 65%;
+  left: 14%;
+}
+.socialMedia i{
+  color: #af894a;
+  margin-left: 5px;
+}
+
+.profile-detail{
+  position: absolute;
+  top: 80%;
+  left: 25%;
+  color: white;
+  font-size: 1.5rem;
+  width: 50%;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+  cursor: pointer;
+}
+.profile-detail:hover{
+  color: #af894a;
+}
+
+.introPage h1,.skillsPage h1, .projectsPage h1, .contactsPage h1{
+  width: 100%;
+  margin-top: 15%;
+  text-align: center;
+  color: #af894a;
+  font-size: 3rem;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.intro .introPage h1,.skills .skillsPage h1, .projects .projectsPage h1,.contacts .contactsPage h1{
+  margin-top: 2%;
+  text-align: start;
+}
+.about-me, .personal-detail ,.skills-progress{
+  width: 40%;
+  text-align: justify;
+  margin-right: 10%;
+  color: white;
+  margin-top: -5%;
+  font-size: 1.3rem;
+}
+
+.personal-detail button{
+  width: 12vw;
+  height: 6vh;
+  background-color: #af894a;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: none;
+
+}
+
+.personal-detail button:hover{
+  background-color:chocolate;
+  border: 1px solid #af894a
+}
+
+.skills-progress{
+  width : 12rem;
+  height : 2rem;
+  background-color : lightgrey;
+  border-radius : 1.2rem;
+  box-shadow:0px 0px 1px, 1px;
+  margin-bottom:50px;
+  margin-right: 100px;
+
+}
+
+.skills .skills-progress{
+  margin-right: 50px;
+  padding: 0;
+  margin-bottom: 100px;
+
+}
+.skills-name span{
+  color : white;
+  font-size: 1.2rem;
+  margin-left : 10px;
+  padding:10px;
+  justify-content: center;
+  align-items:center;
+}
+.skills-progress>div{
+  border-radius: 20px 0px 0px 20px;
+  
+}
+
+.mb-blue{
+  background-color:#2857a4;
+}
+.orange{
+  background-color: #dd571c;
+}
+.Tiger{
+  background-color:#fc6a03;
+}
+.mauve{
+  background-color: #784b84;
+}
+.green{
+  background-color:#008621;
+}
+/* percentage classes */
+.eighty-five-percent{
+  width : 85%;
+  height : inherit;
+ 
+}
+.ninety-percent{
+  width : 90%;
+  height : inherit;
+}
+.eighty-percent{
+  width : 80%;
+  height : inherit;
+}
+.seventy-percent{
+  width : 70%;
+  height:inherit;
+  position:relative;
+}
+
+.portfolio-look{
+  position: relative;
+  width: 26%;
+  height: 25%;
+  margin: 28px;
+}
+
+.portfolio-look img{
+  width: 100%;
+  height: 100%;
+}
+
+.contacts .contactsPage .contact-container{
+  margin-top: -150px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 150px;
+}
+
+.contact-form, .contact-details {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color:white;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color:transparent;
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color:#af894a;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+.contact-details h3 {
+  font-size: 24px;
+  color:#af894a;
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 5px 10px;
+  color:white;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.text{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color:#282a39;
+  background-color: transparent;
+  opacity: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.text p{
+  width: 100%;
+}
+
+.text:hover{
+  opacity:0.8;
+    
+  background-color:lightgrey;
+}
+
+.projectDetail .projectHeader{
+  width: 90%;
+  margin-top: 10%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #af894a;
+}
+
+.projectContent{
+  color: white;
+}
+
+.projectContent h3{
+  color: #af894a;
+}
+
+.projectLinks{
+  display: flex;
+  justify-content: space-around;
+}
+
+.projectLinks a{
+  color: #af894a;
+  text-decoration: none;
+}
+
+.projectLinks a:hover{
+  color: #dd571c;
+  text-decoration:double;
+}
+
+/* App.css or your main CSS file */
+/* App.css or your main CSS file */
+
+/* Entry animation */
+/* Split the page into parts and animate them */
+
+/* Define the transition classes */
+/* Start of the distorted-merge transition */
+.distorted-merge-enter {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.distorted-merge-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.distorted-merge-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.distorted-merge-exit-active {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Animation for distortion */
+.distorted-merge-enter, .distorted-merge-exit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  top: -5%;
+  left: -20%;
+}
+
+.distorted-merge-enter .page {
+  transform-origin: center;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.distorted-merge-enter-active .page {
+  animation: merge-in 1s forwards;
+}
+
+.distorted-merge-exit-active .page {
+  animation: merge-out 1s forwards;
+}
+
+/* Distortion effect animation */
+@keyframes merge-in {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0, 0) scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes merge-out {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0, 0) scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+}
