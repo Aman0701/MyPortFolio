@@ -17,7 +17,7 @@ export const Skills = () => {
     return (
         <>
          
-         <div className="skillsPage" onClick={() => navigate('/skills')}>
+         <div className="skillsPage">
          <h1>Skills</h1>
            {skills.map((skill) => (
                <div className="skills-progress">

@@ -38,7 +38,7 @@ export const Contacts = () => {
     };
 
     return (
-        <div className="contactsPage" onClick={() => navigate('/contact')}>
+        <div className="contactsPage">
             <h1>Contacts</h1>
             <div className="contact-container">
                 <div className="contact-form">

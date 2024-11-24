@@ -11,7 +11,7 @@ export const Intro = () =>{
 
   
     return (
-        <div className="introPage" onClick={() => navigate('/intro')}>
+        <div className="introPage">
             <h1>About Me</h1>
             <div className="about-me" >
                 <p>

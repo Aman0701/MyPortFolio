@@ -12,7 +12,7 @@ export const ProjectData = {
             "HTML, CSS, JavaScript for the frontend.",
             "React.js for dynamic rendering and routing.",
         ],
-        github:"",
+        github:"https://github.com/Aman0701/MyPortFolio",
         hostedLink:"",
     },
     2: { 

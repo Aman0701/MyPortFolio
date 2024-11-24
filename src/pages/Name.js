@@ -13,7 +13,7 @@ export const Name = () => {
   }
 
   return (
-    <div className="namePage fade" onClick={() => navigate('/name')}>
+    <div className="namePage">
       <div className="nav">
         <div className="logo">
           <img src={screenshot} alt="logo" onClick={(e) => handleClick(e,"/")}  />

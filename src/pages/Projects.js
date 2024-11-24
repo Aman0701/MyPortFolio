@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import project1 from '../Images/Screenshot (172).png';
+import project1 from '../Images/Screenshot (178).png';
 import project2 from '../Images/Screenshot (173).png';
 import project3 from '../Images/Screenshot (174).png';
 import project4 from '../Images/Screenshot (175).png';
@@ -15,7 +15,7 @@ export const Projects = () => {
     }
 
     return (
-        <div className="projectsPage" onClick={() => navigate('/projects')}>
+        <div className="projectsPage">
             <h1>Projects</h1>
             <div class="portfolio-look" onClick={(e) => handleClick(e,'1')}>
                 <img src={project1} alt="project1" />
