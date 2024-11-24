@@ -13,7 +13,7 @@ export const ProjectData = {
             "React.js for dynamic rendering and routing.",
         ],
         github:"https://github.com/Aman0701/MyPortFolio",
-        hostedLink:"",
+        hostedLink:"https://silver-alfajores-f91e8b.netlify.app/",
     },
     2: { 
         title: "EASILY", 
