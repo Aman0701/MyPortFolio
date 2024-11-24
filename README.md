@@ -8,3 +8,5 @@ Interactive Animations: Enhances user engagement with subtle animations and tran
 Technologies Used:
 HTML, CSS, JavaScript for the frontend.
 React.js for dynamic rendering and routing.
+
+Deploy Link: https://silver-alfajores-f91e8b.netlify.app/
