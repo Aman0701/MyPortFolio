@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import resume from '../Resume/AmanResume (1).pdf'
+import resume from '../Resume/Aman.pdf'
 export const Intro = () =>{
 
     const navigate = useNavigate();
